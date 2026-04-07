@@ -90,7 +90,7 @@ export default function Projects() {
               </p>
             </div>
             <a
-              href="https://github.com/Jen000"
+              href="https://github.com/jenna-adams"
               target="_blank"
               rel="noopener noreferrer"
               className="projects-github-link"
