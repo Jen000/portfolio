@@ -9,9 +9,9 @@ export default function Home({ setPage }) {
         <h1 className="home-title">
           Hi, I'm <em>Jenna.</em>
         </h1>
-        <p className="home-tagline">I speak fluent tech — and fluent human.</p>
+        <p className="home-tagline">I speak fluent tech and fluent human.</p>
         <p className="home-blurb">
-          I spend my days making a deeply complex product feel approachable — for clients, for teammates, for anyone who needs to understand it. I get excited about data, building tools, and the moment something finally clicks for someone.
+          I spend my days making a deeply complex product feel approachable for clients, for teammates, for anyone who needs to understand it. I get excited about data, building tools, and the moment something finally clicks for someone.
         </p>
 
         <div className="home-cta">
@@ -29,7 +29,7 @@ export default function Home({ setPage }) {
           <div className="home-skills-section">
             <span className="home-section-label">Tech I work with</span>
             <div className="home-skills">
-              {['dbt', 'AWS Athena', 'SQL', 'Python', 'Java', 'React', 'REST APIs', 'Git'].map(skill => (
+              {['SQL', 'Python', 'Node.js','dbt', 'AWS', 'React', 'REST APIs', 'Java','Git'].map(skill => (
                 <span key={skill} className="home-skill-pill">{skill}</span>
               ))}
             </div>

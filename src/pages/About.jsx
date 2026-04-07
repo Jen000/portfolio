@@ -17,7 +17,7 @@ export default function About() {
             <div className="about-bio-card">
               <span className="about-section-label">The work</span>
               <p>
-                I'm a <strong>Solutions Engineer</strong> who genuinely loves the work — the kind of person who gets unreasonably excited when a tricky integration finally clicks, or when a query that was taking 10 seconds runs in 300ms.
+                I'm a <strong>Solutions Engineer</strong> who genuinely loves the work. I'm the kind of person who gets unreasonably excited when a tricky integration finally clicks, or when a query that was taking 10 seconds runs in 300ms.
               </p>
               <p>
                 I work at <strong>Eleos Technologies</strong>, where we build a platform that lets transportation fleets create their own fully custom driver apps — without writing a line of mobile code. It's a technically deep product serving an industry that doesn't always speak "software," which means my job is as much about translation as it is about engineering. I sit between the product, the data, and the clients who depend on both.
@@ -85,7 +85,7 @@ export default function About() {
               <span className="about-hobby-title">Games</span>
             </div>
             <p className="about-hobby-body">
-              I love games that treat you like an explorer, ones with real stories, stunning art, and worlds worth getting lost in. <em>Outer Wilds</em> is the game I recommend to everyone regardless of whether they game. The Assassin's Creed series pulled me into history in a way school never managed to. And Crash Bandicoot / Ratchet & Clank will always hold a piece of my heart.
+              I love games that put me in another world, ones with real stories, stunning art, and landscapes worth getting lost in. <em>Outer Wilds</em> is the game I recommend to everyone regardless of whether they game. The Assassin's Creed series pulled me into history in a way school never managed to. And Crash Bandicoot / Ratchet & Clank will always hold a piece of my heart.
             </p>
             <div className="about-hobby-tags">
               <span className="about-hobby-tag">Outer Wilds</span>
@@ -122,6 +122,8 @@ export default function About() {
             </p>
             <div className="about-hobby-tags">
               <span className="about-hobby-tag">Always something on</span>
+              <span className="about-hobby-tag">Chappel Roan</span>
+              <span className="about-hobby-tag">SZA</span>
             </div>
           </div>
 
