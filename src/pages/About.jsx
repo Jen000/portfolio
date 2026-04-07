@@ -57,30 +57,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* ── Quick facts ── */}
-        <div className="about-facts-strip">
-          <div className="about-fact">
-            <Telescope size={20} strokeWidth={1.5} className="about-fact-icon" />
-            <span className="about-fact-label">Obsession</span>
-            <span className="about-fact-value">The vastness of space. It never stops being mind-bending.</span>
-          </div>
-          <div className="about-fact">
-            <BookOpen size={20} strokeWidth={1.5} className="about-fact-icon" />
-            <span className="about-fact-label">Nerd cred</span>
-            <span className="about-fact-value">Almost got a degree in English Lit. Would still recommend.</span>
-          </div>
-          <div className="about-fact">
-            <Leaf size={20} strokeWidth={1.5} className="about-fact-icon" />
-            <span className="about-fact-label">Reset button</span>
-            <span className="about-fact-value">Outside. Any outside. Fresh air fixes most things.</span>
-          </div>
-          <div className="about-fact">
-            <Gamepad2 size={20} strokeWidth={1.5} className="about-fact-icon" />
-            <span className="about-fact-label">Gaming taste</span>
-            <span className="about-fact-value">If the world is beautiful and the story is good, I'm in.</span>
-          </div>
-        </div>
-
         {/* ── Currently ── */}
         <div className="about-currently-card">
           <span className="about-section-label">Currently into</span>
