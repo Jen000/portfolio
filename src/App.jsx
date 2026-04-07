@@ -12,19 +12,17 @@ export default function App() {
   const renderPage = () => {
     switch (page) {
       case 'projects': return <Projects />
-      case 'resume': return <Resume />
-      case 'about': return <About />
-      case 'contact': return <Contact />
-      default: return  <Home setPage={setPage} />
+      case 'resume':   return <Resume />
+      case 'about':    return <About />
+      case 'contact':  return <Contact />
+      default:         return <Home setPage={setPage} />
     }
   }
 
   return (
     <div>
-      <Navbar setPage={setPage} />
-      <div className="container">
-        {renderPage()}
-      </div>
+      <Navbar setPage={setPage} activePage={page} />
+      {renderPage()}
     </div>
   )
 }
