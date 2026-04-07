@@ -19,7 +19,7 @@ export default function Navbar({ setPage, activePage }) {
   return (
     <nav className="nav">
       <button className="nav-logo" onClick={() => navigate('home')}>
-        Jenna
+        Jenna Adams
       </button>
 
       {/* Desktop links */}
