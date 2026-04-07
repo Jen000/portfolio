@@ -327,7 +327,7 @@ export default function Resume() {
                 <ul>
                   <li>Conducted QA testing across 6 product segments, reducing post-release defects by 11%.</li>
                   <li>Designed QA Analyst onboarding process, reducing early turnover by 35%.</li>
-                  <li>Managed ~700 client inquiries monthly, reducing resolution time by 20%.</li>
+                  <li>Managed ~120 client inquiries monthly, reducing resolution time by 20%.</li>
                 </ul>
               </div>
             </div>
