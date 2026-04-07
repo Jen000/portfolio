@@ -27,18 +27,13 @@ export default function About() {
           </div>
 
           <div className="about-salem-card">
-            {/*
-              Replace the placeholder below with an actual <img> tag:
-              <img src="/salem.jpg" alt="Salem the cat" className="about-salem-photo" />
-            */}
-            <div className="about-salem-photo-placeholder">
-              <span>🐱</span>
-              <span>Photo of Salem</span>
-            </div>
+            {
+              <img src="/images/salem.jpg" alt="Salem the cat" className="about-salem-photo" />
+            }
             <div className="about-salem-info">
               <p className="about-salem-name">Salem</p>
               <p className="about-salem-desc">
-                The world's best coworker. Salem is a permanent lap fixture — warm, purring, and completely unbothered by deadlines. If you're sitting down, he's already on you.
+                The world's best coworker. Salem is a lap cat, warm, purring, and completely unbothered by deadlines. If you're sitting down, she's already on you.
               </p>
             </div>
           </div>
@@ -49,10 +44,10 @@ export default function About() {
           <span className="about-section-label">The person</span>
           <div className="about-bio-card-body">
             <p>
-              I grew up loving <strong>stories</strong> — I came pretty close to getting a degree in English Literature before deciding I wanted something I could also pay rent with. That love of narrative never went away, though. It just shows up in how I explain technical concepts, write documentation, and approach problems.
+              I grew up loving <strong>stories</strong>. I came pretty close to getting a degree in English Literature before deciding I wanted something I could also pay rent with. That love of narrative never went away, though. It just shows up in how I explain technical concepts, write documentation, and approach problems.
             </p>
             <p>
-              Outside of work I'm happiest when I'm outside, exploring something, or deeply immersed in a game with a great world to get lost in. I care a lot about the craft of things — whether that's the art direction of a video game, the pacing of a novel, or the architecture of a data pipeline.
+              Outside of work I'm happiest when I'm outside, exploring something, or deeply immersed in a game with a great world to get lost in. I care a lot about the craft of things, whether that's the art direction of a video game, the pacing of a novel, or the architecture of a data pipeline.
             </p>
           </div>
         </div>
@@ -64,20 +59,20 @@ export default function About() {
             <div className="about-currently-item">
               <Gamepad2 size={16} strokeWidth={1.5} className="about-currently-icon" />
               <span className="about-currently-type">Playing</span>
-              <span className="about-currently-value">Replace with your current game</span>
-              <span className="about-currently-sub">Update this whenever you like</span>
+              <span className="about-currently-value">Outer Wilds</span>
+              <span className="about-currently-sub">Love the time loop</span>
             </div>
             <div className="about-currently-item">
               <BookOpen size={16} strokeWidth={1.5} className="about-currently-icon" />
               <span className="about-currently-type">Reading</span>
-              <span className="about-currently-value">Replace with your current book</span>
-              <span className="about-currently-sub">Update this whenever you like</span>
+              <span className="about-currently-value">Can't Spell Treason <br />Without Tea</span>
+              <span className="about-currently-sub">Slowly but surely</span>
             </div>
             <div className="about-currently-item">
               <Headphones size={16} strokeWidth={1.5} className="about-currently-icon" />
               <span className="about-currently-type">Listening to</span>
-              <span className="about-currently-value">Replace with what's in your earbuds</span>
-              <span className="about-currently-sub">Update this whenever you like</span>
+              <span className="about-currently-value">TV Girl</span>
+              <span className="about-currently-sub">Discovered recently</span>
             </div>
           </div>
         </div>
@@ -90,7 +85,7 @@ export default function About() {
               <span className="about-hobby-title">Games</span>
             </div>
             <p className="about-hobby-body">
-              I love games that treat you like an adult — ones with real stories, stunning art, and worlds worth getting lost in. <em>Outer Wilds</em> is the game I recommend to everyone regardless of whether they game. The Assassin's Creed series pulled me into history in a way school never managed to. And Crash Bandicoot / Ratchet & Clank will always hold a piece of my heart.
+              I love games that treat you like an explorer, ones with real stories, stunning art, and worlds worth getting lost in. <em>Outer Wilds</em> is the game I recommend to everyone regardless of whether they game. The Assassin's Creed series pulled me into history in a way school never managed to. And Crash Bandicoot / Ratchet & Clank will always hold a piece of my heart.
             </p>
             <div className="about-hobby-tags">
               <span className="about-hobby-tag">Outer Wilds</span>

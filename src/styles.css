@@ -925,13 +925,22 @@ h1, h2, h3, h4 {
   grid-template-columns: 1fr 260px;
   gap: 24px;
   margin-bottom: 32px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .about-bio-col {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.about-bio-col .about-bio-card {
+  flex: 1;
+}
+
+.about-salem-card {
+  display: flex;
+  flex-direction: column;
 }
 
 .about-bio-card {
