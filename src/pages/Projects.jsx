@@ -1,5 +1,5 @@
 import ProjectCard from '../components/ProjectCard'
-import { Lock } from 'lucide-react'
+import { Hammer } from 'lucide-react'
 
 const projects = [
   {
@@ -18,8 +18,8 @@ const projects = [
   },
   {
     title: "Trip Expense Tracker",
-    description: "A login-only expense tracker I'm building for a 12-day west coast road trip. Tracks shared costs between two people in real time. Login-gated to keep AWS costs in check.",
-    tags: ["React", "AWS", "SQL"],
+    description: "A login-only expense tracker built for a 12-day west coast road trip. Tracks and splits shared costs between two people in real time. Login-gated to keep AWS costs in check.",
+    tags: ["React", "AWS", "NOSQL"],
     liveUrl: "https://www.tripexpenses.click/",
     githubUrl: "https://github.com/Jen000/TripCalculator",
   },
@@ -43,6 +43,15 @@ const projects = [
     tags: ["CSS", "HTML", "Frontend"],
     liveUrl: null,
     githubUrl: "https://github.com/Jen000/CSS-Headers",
+  },
+]
+
+const inProgress = [
+  {
+    title: "End-to-End Product Data + AI Pipeline",
+    description: "Taking on the role of a data analyst inheriting a messy product catalog. I'll clean and model the data with SQL, then build an AI assistant layer using the Claude API so anyone can query the data in plain English. Finishing with a dashboard showing data quality scores and an AI chat interface.",
+    tags: ["SQL", "dbt", "Python", "Claude API", "React", "Data Engineering"],
+    githubUrl: null,
   },
 ]
 
@@ -79,6 +88,26 @@ export default function Projects() {
           ))}
         </div>
 
+        {/* ── Currently building ── */}
+        <div className="projects-wip-section">
+          <div className="projects-wip-header">
+            <Hammer size={18} strokeWidth={1.5} className="projects-wip-icon" />
+            <div>
+              <span className="projects-eyebrow">In progress</span>
+              <h2 className="projects-work-title">Currently Building</h2>
+              <p className="projects-subtitle">
+                Work in progress — check back soon.
+              </p>
+            </div>
+          </div>
+
+          <div className="projects-work-grid">
+            {inProgress.map((project, i) => (
+              <ProjectCard key={project.title} {...project} index={i} variant="wip" />
+            ))}
+          </div>
+        </div>
+
         {/* ── Work projects ── */}
         <div className="projects-work-section">
           <div className="projects-work-header">
@@ -90,7 +119,7 @@ export default function Projects() {
               </p>
             </div>
             <a
-              href="https://github.com/jenna-adams"
+              href="https://github.com/Jen000"
               target="_blank"
               rel="noopener noreferrer"
               className="projects-github-link"
@@ -103,20 +132,8 @@ export default function Projects() {
           </div>
 
           <div className="projects-work-grid">
-            {workProjects.map((project) => (
-              <div key={project.title} className="projects-work-card">
-                <div className="projects-work-card-header">
-                  <Lock size={13} strokeWidth={1.5} className="projects-work-lock" />
-                  <span className="projects-work-private">Private repo</span>
-                </div>
-                <h3 className="projects-work-card-title">{project.title}</h3>
-                <p className="projects-work-card-desc">{project.description}</p>
-                <div className="project-tags">
-                  {project.tags.map(tag => (
-                    <span key={tag} className="project-tag">{tag}</span>
-                  ))}
-                </div>
-              </div>
+            {workProjects.map((project, i) => (
+              <ProjectCard key={project.title} {...project} index={i} variant="work" />
             ))}
           </div>
         </div>

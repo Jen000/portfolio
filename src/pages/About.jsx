@@ -20,7 +20,7 @@ export default function About() {
                 I'm a <strong>Solutions Engineer</strong> who genuinely loves the work. I'm the kind of person who gets unreasonably excited when a tricky integration finally clicks, or when a query that was taking 10 seconds runs in 300ms.
               </p>
               <p>
-                I work at <strong>Eleos Technologies</strong>, where we build a platform that lets transportation fleets create their own fully custom driver apps — without writing a line of mobile code. It's a technically deep product serving an industry that doesn't always speak "software," which means my job is as much about translation as it is about engineering. I sit between the product, the data, and the clients who depend on both.
+                I work at <strong>Eleos Technologies</strong>, where we build a platform that lets transportation fleets create their own fully custom driver apps, without writing a line of mobile code. It's a technically deep product serving an industry that doesn't always speak "software," which means my job is as much about translation as it is about engineering. I sit between the product, the data, and the clients who depend on both.
               </p>
             </div>
 
@@ -102,7 +102,7 @@ export default function About() {
               <span className="about-hobby-title">Science & History</span>
             </div>
             <p className="about-hobby-body">
-              Space is my go-to rabbit hole — the scale of it is genuinely incomprehensible and I love that. I'm equally drawn to ancient civilizations: the Vikings, Indigenous peoples across continents, how people built entire worlds before we had any of the tools we take for granted. Science and storytelling, it turns out, are not so different.
+              Space is my go-to rabbit hole, the scale of it is genuinely incomprehensible and I love that. I'm equally drawn to ancient civilizations: the Vikings, Indigenous peoples across continents, how people built entire worlds before we had any of the tools we take for granted. Science and storytelling, it turns out, are not so different.
             </p>
             <div className="about-hobby-tags">
               <span className="about-hobby-tag">Cosmology</span>
@@ -118,7 +118,7 @@ export default function About() {
               <span className="about-hobby-title">Music</span>
             </div>
             <p className="about-hobby-body">
-              Music is always on. It sets the whole tone of whatever I'm doing — there's a playlist for coding, one for hiking, one for cooking, and one for when Salem decides my keyboard is actually a bed and I need something calming.
+              Music is always on. It sets the whole tone of whatever I'm doing, there's a playlist for coding, one for hiking, one for cooking, and one for when Salem decides my keyboard is actually a bed and I need something calming.
             </p>
             <div className="about-hobby-tags">
               <span className="about-hobby-tag">Always something on</span>
@@ -133,7 +133,7 @@ export default function About() {
               <span className="about-hobby-title">The Outdoors</span>
             </div>
             <p className="about-hobby-body">
-              Being outside genuinely lifts my spirits in a way nothing else quite does. Hiking is a favorite, but really any excuse to be in fresh air works — a walk, a trail, sitting somewhere with a good view. It's hard to stay stuck in your head when you're out in the world.
+              Being outside genuinely lifts my spirits in a way nothing else quite does. Hiking is a favorite, but really any excuse to be in fresh air works, a walk, a trail, sitting somewhere with a good view. It's hard to stay stuck in your head when you're out in the world.
             </p>
             <div className="about-hobby-tags">
               <span className="about-hobby-tag">Hiking</span>

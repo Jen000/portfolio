@@ -555,6 +555,62 @@ h1, h2, h3, h4 {
   cursor: default;
 }
 
+/* ── Currently building section ── */
+.projects-wip-section {
+  margin-top: 72px;
+  padding-top: 56px;
+  border-top: 1px solid var(--border);
+}
+
+.projects-wip-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.projects-wip-icon {
+  color: var(--teal-400);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+/* ── Card variant badges ── */
+.projects-wip-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--teal-800);
+  background: var(--teal-50);
+  border: 1px solid var(--teal-100);
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: 12px;
+}
+
+.projects-work-card-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.projects-work-lock {
+  color: var(--ink-muted);
+}
+
+.projects-work-private {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
 /* ── Work projects section ── */
 .projects-work-section {
   margin-top: 72px;
@@ -609,49 +665,6 @@ h1, h2, h3, h4 {
   gap: 20px;
 }
 
-.projects-work-card {
-  background: var(--cream-card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 24px 26px;
-  box-shadow: 0 2px 0 var(--border), 0 4px 14px rgba(0,0,0,0.03);
-}
-
-.projects-work-card-header {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 12px;
-}
-
-.projects-work-lock {
-  color: var(--ink-muted);
-}
-
-.projects-work-private {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-}
-
-.projects-work-card-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--ink);
-  margin: 0 0 10px;
-  line-height: 1.25;
-}
-
-.projects-work-card-desc {
-  font-size: 13.5px;
-  font-weight: 300;
-  color: var(--ink-mid);
-  line-height: 1.65;
-  margin: 0 0 16px;
-}
 
 
 /* ============================================================
