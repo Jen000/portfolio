@@ -810,7 +810,7 @@ h1, h2, h3, h4 {
 }
 
 .resume-job ul li::before {
-  content: '—';
+  content: '•';
   position: absolute;
   left: 0;
   color: var(--teal-400);
@@ -1289,18 +1289,49 @@ h1, h2, h3, h4 {
    PRINT (Resume)
    ============================================================ */
 @media print {
-  body * { visibility: hidden; }
-  #resume, #resume * { visibility: visible; }
-  #resume {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    box-shadow: none;
+  @page {
+    margin: default;
   }
-  .resume-page { background: white; padding: 0; }
-  .resume-card { border: none; box-shadow: none; padding: 32px; border-radius: 0; }
-  .resume-download-bar { display: none; }
-  .resume-wrapper { max-width: 100%; }
+
+  .nav,
+  .resume-download-bar {
+    display: none !important;
+  }
+
+  .resume-page {
+    padding: 0;
+    margin: 0;
+    background: white;
+    min-height: unset;
+  }
+
+  .resume-wrapper {
+    max-width: 100%;
+  }
+
+  .resume-card {
+    border: none;
+    box-shadow: none;
+    padding: 16px 28px;
+    border-radius: 0;
+  }
+
+  .resume-header { padding-bottom: 10px; margin-bottom: 14px; }
+  .resume-name { font-size: 30px; }
+  .resume-contact { font-size: 11px; }
+  .resume-section { margin-bottom: 10px; }
+  .resume-section-title { margin-bottom: 6px; padding-bottom: 3px; font-size: 9px; }
+  .resume-summary { font-size: 11px; line-height: 1.4; }
+  .resume-job { margin-bottom: 8px; }
+  .resume-job-title { font-size: 13px; }
+  .resume-job-company { margin-bottom: 3px; font-size: 11px; }
+  .resume-job-dates { font-size: 11px; }
+  .resume-job ul li { font-size: 11px; line-height: 1.4; margin-bottom: 2px; padding-left: 14px; }
+  .resume-edu-degree { font-size: 13px; }
+  .resume-edu-school { font-size: 11px; margin-top: 1px; }
+  .skills-grid { gap: 8px 32px; }
+  .skill-category { font-size: 9px; }
+  .skill-items { font-size: 11px; }
 }
 
 
