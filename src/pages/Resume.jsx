@@ -55,7 +55,7 @@ const data = {
     skills: [
       { category: "Client Success", items: "Account Management, Technical Onboarding, Solutioning, Cross-functional Collaboration" },
       { category: "Technical", items: "REST APIs, API Integration, SQL, dbt, AWS Athena, Python, Java, React, Git" },
-      { category: "Communication", items: "Technical Documentation, User Guides, Stakeholder Presentations" },
+      { category: "Communication", items: "Technical writing, client-facing presentations, cross-functional collaboration, translating complex concepts for non-technical audiences" },
       { category: "AI & Productivity", items: "Prompt engineering, AI-assisted development (Claude, Gemini)" },
     ],
   },
@@ -236,7 +236,7 @@ export default function Resume() {
           </div>
 
           <div className="resume-section">
-            <h2 className="resume-section-title">Relevant Experience</h2>
+            <h2 className="resume-section-title">Experience</h2>
             {resume.jobs.map((job) => (
               <div key={`${job.title}-${job.company}`} className="resume-job">
                 <div className="resume-job-header">

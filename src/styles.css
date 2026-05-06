@@ -1734,6 +1734,8 @@ h1, h2, h3, h4 {
     margin: default;
   }
 
+  html, body { height: auto; }
+
   .nav,
   .resume-download-bar,
   .resume-presets {
@@ -1747,33 +1749,31 @@ h1, h2, h3, h4 {
     min-height: unset;
   }
 
-  .resume-wrapper {
-    max-width: 100%;
-  }
+  .resume-wrapper { max-width: 100%; }
 
   .resume-card {
     border: none;
     box-shadow: none;
-    padding: 16px 28px;
+    padding: 14px 26px;
     border-radius: 0;
   }
 
-  .resume-header { padding-bottom: 10px; margin-bottom: 14px; }
-  .resume-name { font-size: 30px; }
-  .resume-contact { font-size: 11px; }
-  .resume-section { margin-bottom: 10px; }
-  .resume-section-title { margin-bottom: 6px; padding-bottom: 3px; font-size: 9px; }
-  .resume-summary { font-size: 11px; line-height: 1.4; }
-  .resume-job { margin-bottom: 8px; }
-  .resume-job-title { font-size: 13px; }
-  .resume-job-company { margin-bottom: 3px; font-size: 11px; }
-  .resume-job-dates { font-size: 11px; }
-  .resume-job ul li { font-size: 11px; line-height: 1.4; margin-bottom: 2px; padding-left: 14px; }
-  .resume-edu-degree { font-size: 13px; }
-  .resume-edu-school { font-size: 11px; margin-top: 1px; }
-  .skills-grid { gap: 8px 32px; }
-  .skill-category { font-size: 9px; }
-  .skill-items { font-size: 11px; }
+  .resume-header { padding-bottom: 8px; margin-bottom: 10px; }
+  .resume-name { font-size: 28px; }
+  .resume-contact { font-size: 10.5px; }
+  .resume-section { margin-bottom: 8px; }
+  .resume-section-title { margin-bottom: 5px; padding-bottom: 3px; font-size: 8.5px; }
+  .resume-summary { font-size: 10.5px; line-height: 1.35; }
+  .resume-job { margin-bottom: 7px; }
+  .resume-job-title { font-size: 12.5px; }
+  .resume-job-company { margin-bottom: 2px; font-size: 10.5px; }
+  .resume-job-dates { font-size: 10.5px; }
+  .resume-job ul li { font-size: 10.5px; line-height: 1.35; margin-bottom: 2px; padding-left: 13px; }
+  .resume-edu-degree { font-size: 12.5px; }
+  .resume-edu-school { font-size: 10.5px; margin-top: 1px; }
+  .skills-grid { gap: 6px 32px; }
+  .skill-category { font-size: 8.5px; }
+  .skill-items { font-size: 10.5px; }
 }
 
 
