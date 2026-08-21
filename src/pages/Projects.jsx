@@ -3,6 +3,20 @@ import { Hammer } from 'lucide-react'
 
 const projects = [
   {
+    title: "IdeaNet",
+    description: "A visual thinking tool for mapping a problem into ideas and down into concrete actions — nodes on a canvas, linked by relationships you name yourself. Hand-rolled SVG canvas with pan, zoom, focus and collapsible branches, plus a public gallery of shared networks. Backed by a serverless AWS stack behind a swappable storage adapter.",
+    tags: ["React", "SVG Canvas", "AWS CDK", "Cognito", "DynamoDB", "Tailwind"],
+    liveUrl: "https://jen000.github.io/ideanet/",
+    githubUrl: "https://github.com/Jen000/ideanet",
+  },
+  {
+    title: "Draw the Topic",
+    description: "A drawing game for parties and presentation nights. The board goes on the big screen, everyone joins from their phone with a QR code or a six-character code, draws the topic against a timer, and the room votes for a favorite. No installs and no player accounts — the whole game is a single HTML file on Firebase.",
+    tags: ["JavaScript", "Firebase", "Canvas API", "Realtime"],
+    liveUrl: "https://jen000.github.io/drawing-tool/",
+    githubUrl: "https://github.com/Jen000/drawing-tool",
+  },
+  {
     title: "Octo-Fall Leaf Catcher Game",
     description: "A browser game where you catch falling leaves while dodging pinecones. Built for smooth, responsive gameplay across devices.",
     tags: ["JavaScript", "Canvas API", "Game Dev"],
@@ -35,7 +49,7 @@ const projects = [
     description: "A college group project built while learning to work with APIs. Analyzes birthdays and surfaces fun facts — our first real dive into external data.",
     tags: ["Python", "APIs", "Data Analysis"],
     liveUrl: null,
-    githubUrl: "https://github.com/Jen000/BirthdayAnalyzer",
+    githubUrl: "https://github.com/Grace-Austen/BirthdayAnalyzer",
   },
   {
     title: "CSS Headers",
@@ -48,10 +62,16 @@ const projects = [
 
 const inProgress = [
   {
+    title: "Ember & Thread",
+    description: "A cozy top-down pixel-art adventure built in Godot 4, about mending broken magical objects and recovering lost memories. So far: cozy-paced player movement and Pip, a companion who talks through a seven-color glow language — each emotion paired with its own pulse rhythm, so color is never the only signal.",
+    tags: ["Godot 4", "GDScript", "Game Dev", "Pixel Art"],
+    githubUrl: "https://github.com/Jen000/EmberThread",
+  },
+  {
     title: "End-to-End Product Data + AI Pipeline",
     description: "Taking on the role of a data analyst inheriting a messy product catalog. I'll clean and model the data with SQL, then build an AI assistant layer using the Claude API so anyone can query the data in plain English. Finishing with a dashboard showing data quality scores and an AI chat interface.",
     tags: ["SQL", "dbt", "Python", "Claude API", "React", "Data Engineering"],
-    githubUrl: null,
+    githubUrl: "https://github.com/Jen000/datawash-intelligence",
   },
 ]
 
