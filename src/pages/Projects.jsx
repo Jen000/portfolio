@@ -4,7 +4,7 @@ import { Hammer } from 'lucide-react'
 const projects = [
   {
     title: "IdeaNet",
-    description: "A visual thinking tool for mapping a problem into ideas and down into concrete actions — nodes on a canvas, linked by relationships you name yourself. Hand-rolled SVG canvas with pan, zoom, focus and collapsible branches, plus a public gallery of shared networks. Backed by a serverless AWS stack behind a swappable storage adapter.",
+    description: "A small tool for mapping ideas visually — nodes on a canvas, linked by relationships you name yourself. I built it to make my own network diagrams and put it online for anyone who needs something similar. Hand-rolled SVG canvas with pan, zoom, focus and collapsible branches, plus a public gallery, running on a serverless AWS backend.",
     tags: ["React", "SVG Canvas", "AWS CDK", "Cognito", "DynamoDB", "Tailwind"],
     liveUrl: "https://jen000.github.io/ideanet/",
     githubUrl: "https://github.com/Jen000/ideanet",
@@ -65,7 +65,7 @@ const inProgress = [
     title: "Ember & Thread",
     description: "A cozy top-down pixel-art adventure built in Godot 4, about mending broken magical objects and recovering lost memories. So far: cozy-paced player movement and Pip, a companion who talks through a seven-color glow language — each emotion paired with its own pulse rhythm, so color is never the only signal.",
     tags: ["Godot 4", "GDScript", "Game Dev", "Pixel Art"],
-    status: "Playable prototype. Steps 1–2 of the build order are done — project setup, player movement, and Pip's companion behavior. The world, story systems, and settings menu are next.",
+    status: "Early days — no playable demo yet. Project setup is done, along with player movement and Pip's companion behavior. The world, story systems, and settings menu come next.",
     githubUrl: "https://github.com/Jen000/EmberThread",
   },
   {
