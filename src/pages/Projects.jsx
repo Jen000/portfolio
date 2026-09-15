@@ -3,6 +3,20 @@ import { Hammer } from 'lucide-react'
 
 const projects = [
   {
+    title: "IdeaNet",
+    description: "A small tool for mapping ideas visually — nodes on a canvas, linked by relationships you name yourself. I built it to make my own network diagrams and put it online for anyone who needs something similar. Hand-rolled SVG canvas with pan, zoom, focus and collapsible branches, plus a public gallery, running on a serverless AWS backend.",
+    tags: ["React", "SVG Canvas", "AWS CDK", "Cognito", "DynamoDB", "Tailwind"],
+    liveUrl: "https://jen000.github.io/ideanet/",
+    githubUrl: "https://github.com/Jen000/ideanet",
+  },
+  {
+    title: "Draw the Topic",
+    description: "A drawing game for parties and presentation nights. The board goes on the big screen, everyone joins from their phone with a QR code or a six-character code, draws the topic against a timer, and the room votes for a favorite. No installs and no player accounts — the whole game is a single HTML file on Firebase.",
+    tags: ["JavaScript", "Firebase", "Canvas API", "Realtime"],
+    liveUrl: "https://jen000.github.io/drawing-tool/",
+    githubUrl: "https://github.com/Jen000/drawing-tool",
+  },
+  {
     title: "Octo-Fall Leaf Catcher Game",
     description: "A browser game where you catch falling leaves while dodging pinecones. Built for smooth, responsive gameplay across devices.",
     tags: ["JavaScript", "Canvas API", "Game Dev"],
@@ -32,10 +46,10 @@ const projects = [
   },
   {
     title: "Birthday Analyzer",
-    description: "A college group project built while learning to work with APIs. Analyzes birthdays and surfaces fun facts — our first real dive into external data.",
-    tags: ["Python", "APIs", "Data Analysis"],
+    description: "A college group project built while learning to work with APIs. Give it a birthday and it pulls together horoscope info, that week's Billboard top 10, and NASA's picture of the day — our first real dive into external data.",
+    tags: ["JavaScript", "REST APIs", "Group Project"],
     liveUrl: null,
-    githubUrl: "https://github.com/Jen000/BirthdayAnalyzer",
+    githubUrl: "https://github.com/Grace-Austen/BirthdayAnalyzer",
   },
   {
     title: "CSS Headers",
@@ -48,10 +62,18 @@ const projects = [
 
 const inProgress = [
   {
+    title: "Ember & Thread",
+    description: "A cozy top-down pixel-art adventure built in Godot 4, about mending broken magical objects and recovering lost memories. So far: cozy-paced player movement and Pip, a companion who talks through a seven-color glow language — each emotion paired with its own pulse rhythm, so color is never the only signal.",
+    tags: ["Godot 4", "GDScript", "Game Dev", "Pixel Art"],
+    status: "Early days — no playable demo yet. Project setup is done, along with player movement and Pip's companion behavior. The world, story systems, and settings menu come next.",
+    githubUrl: "https://github.com/Jen000/EmberThread",
+  },
+  {
     title: "End-to-End Product Data + AI Pipeline",
     description: "Taking on the role of a data analyst inheriting a messy product catalog. I'll clean and model the data with SQL, then build an AI assistant layer using the Claude API so anyone can query the data in plain English. Finishing with a dashboard showing data quality scores and an AI chat interface.",
     tags: ["SQL", "dbt", "Python", "Claude API", "React", "Data Engineering"],
-    githubUrl: null,
+    status: "Scoped and planned. The repo is set up and the build starts next — nothing to show yet.",
+    githubUrl: "https://github.com/Jen000/datawash-intelligence",
   },
 ]
 
@@ -78,7 +100,7 @@ export default function Projects() {
           <span className="projects-eyebrow">Portfolio</span>
           <h1 className="projects-title">Things I've Built</h1>
           <p className="projects-subtitle">
-            Personal projects across games, data, and tools — some live, all on GitHub.
+            Finished projects across games, data, and tools — most are live, all are on GitHub.
           </p>
         </div>
 
@@ -96,7 +118,7 @@ export default function Projects() {
               <span className="projects-eyebrow">In progress</span>
               <h2 className="projects-work-title">Currently Building</h2>
               <p className="projects-subtitle">
-                Work in progress — check back soon.
+                Actively building these right now. Here's where each one stands.
               </p>
             </div>
           </div>

@@ -42,14 +42,14 @@ export default function Home({ setPage }) {
               <div className="home-featured-accent" />
               <div className="home-featured-body">
                 <div className="home-featured-text">
-                  <h3 className="home-featured-title">Octo-Fall Leaf Catcher Game</h3>
+                  <h3 className="home-featured-title">IdeaNet</h3>
                   <p className="home-featured-desc">
-                    A browser game where you catch falling leaves while dodging pinecones. Built for smooth, responsive gameplay across devices.
+                    A visual thinking tool for mapping ideas — nodes on a canvas, linked by relationships you name yourself. Hand-rolled SVG canvas on a serverless AWS backend.
                   </p>
                   <div className="home-featured-tags">
-                    <span className="home-featured-tag">JavaScript</span>
-                    <span className="home-featured-tag">Canvas API</span>
-                    <span className="home-featured-tag">Game Dev</span>
+                    <span className="home-featured-tag">React</span>
+                    <span className="home-featured-tag">SVG Canvas</span>
+                    <span className="home-featured-tag">AWS</span>
                   </div>
                 </div>
                 <ArrowRight size={18} strokeWidth={1.5} className="home-featured-arrow" />
