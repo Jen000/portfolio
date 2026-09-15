@@ -46,8 +46,8 @@ const projects = [
   },
   {
     title: "Birthday Analyzer",
-    description: "A college group project built while learning to work with APIs. Analyzes birthdays and surfaces fun facts — our first real dive into external data.",
-    tags: ["Python", "APIs", "Data Analysis"],
+    description: "A college group project built while learning to work with APIs. Give it a birthday and it pulls together horoscope info, that week's Billboard top 10, and NASA's picture of the day — our first real dive into external data.",
+    tags: ["JavaScript", "REST APIs", "Group Project"],
     liveUrl: null,
     githubUrl: "https://github.com/Grace-Austen/BirthdayAnalyzer",
   },
@@ -65,12 +65,14 @@ const inProgress = [
     title: "Ember & Thread",
     description: "A cozy top-down pixel-art adventure built in Godot 4, about mending broken magical objects and recovering lost memories. So far: cozy-paced player movement and Pip, a companion who talks through a seven-color glow language — each emotion paired with its own pulse rhythm, so color is never the only signal.",
     tags: ["Godot 4", "GDScript", "Game Dev", "Pixel Art"],
+    status: "Playable prototype. Steps 1–2 of the build order are done — project setup, player movement, and Pip's companion behavior. The world, story systems, and settings menu are next.",
     githubUrl: "https://github.com/Jen000/EmberThread",
   },
   {
     title: "End-to-End Product Data + AI Pipeline",
     description: "Taking on the role of a data analyst inheriting a messy product catalog. I'll clean and model the data with SQL, then build an AI assistant layer using the Claude API so anyone can query the data in plain English. Finishing with a dashboard showing data quality scores and an AI chat interface.",
     tags: ["SQL", "dbt", "Python", "Claude API", "React", "Data Engineering"],
+    status: "Scoped and planned. The repo is set up and the build starts next — nothing to show yet.",
     githubUrl: "https://github.com/Jen000/datawash-intelligence",
   },
 ]
@@ -98,7 +100,7 @@ export default function Projects() {
           <span className="projects-eyebrow">Portfolio</span>
           <h1 className="projects-title">Things I've Built</h1>
           <p className="projects-subtitle">
-            Personal projects across games, data, and tools — some live, all on GitHub.
+            Finished projects across games, data, and tools — most are live, all are on GitHub.
           </p>
         </div>
 
@@ -116,7 +118,7 @@ export default function Projects() {
               <span className="projects-eyebrow">In progress</span>
               <h2 className="projects-work-title">Currently Building</h2>
               <p className="projects-subtitle">
-                Work in progress — check back soon.
+                Actively building these right now. Here's where each one stands.
               </p>
             </div>
           </div>

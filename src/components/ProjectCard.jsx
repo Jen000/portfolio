@@ -4,6 +4,7 @@ export default function ProjectCard({
   title,
   description,
   tags = [],
+  status,
   liveUrl,
   githubUrl,
   index = 0,
@@ -40,6 +41,13 @@ export default function ProjectCard({
           )}
 
           <p className="project-description">{description}</p>
+
+          {status && (
+            <p className="project-status">
+              <span className="project-status-label">Where it stands</span>
+              {status}
+            </p>
+          )}
         </div>
 
         {/* Links — only show if there's something to show */}
