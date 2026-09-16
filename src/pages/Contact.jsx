@@ -1,4 +1,49 @@
+import { useEffect, useRef, useState } from 'react'
+import { Check, Copy } from 'lucide-react'
+
+const EMAIL = 'jennashaye417@gmail.com'
+
+/** Clipboard API where it's available, with the legacy path as a fallback
+ *  (older browsers, and any context where the async API is blocked). */
+async function writeClipboard(text) {
+  try {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(text)
+      return true
+    }
+  } catch {
+    // fall through and try the legacy path
+  }
+
+  try {
+    const field = document.createElement('textarea')
+    field.value = text
+    field.setAttribute('readonly', '')
+    field.style.cssText = 'position:fixed;top:-1000px;opacity:0'
+    document.body.appendChild(field)
+    field.select()
+    const ok = document.execCommand('copy')
+    document.body.removeChild(field)
+    return ok
+  } catch {
+    return false
+  }
+}
+
 export default function Contact() {
+  // null | 'copied' | 'failed'
+  const [copyState, setCopyState] = useState(null)
+  const resetTimer = useRef(null)
+
+  useEffect(() => () => clearTimeout(resetTimer.current), [])
+
+  const copyEmail = async () => {
+    const ok = await writeClipboard(EMAIL)
+    setCopyState(ok ? 'copied' : 'failed')
+    clearTimeout(resetTimer.current)
+    resetTimer.current = setTimeout(() => setCopyState(null), 2400)
+  }
+
   return (
     <div className="contact-page">
       <div className="contact-wrapper">
@@ -9,19 +54,37 @@ export default function Contact() {
         </p>
 
         <div className="contact-card" data-reveal>
-          <a href="mailto:jennashaye417@gmail.com" className="contact-item">
-            <div className="contact-icon">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--teal-600)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="4" width="20" height="16" rx="2"/>
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-              </svg>
-            </div>
-            <div>
-              <span className="contact-item-label">Email</span>
-              <span className="contact-item-value">jennashaye417@gmail.com</span>
-            </div>
-            <span className="contact-arrow">→</span>
-          </a>
+
+          {/* Email gets a copy button alongside the mailto: a mailto does
+              nothing at all for visitors with no mail client set up. */}
+          <div className="contact-row">
+            <a href={`mailto:${EMAIL}`} className="contact-item">
+              <div className="contact-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--teal-600)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+              </div>
+              <div>
+                <span className="contact-item-label">Email</span>
+                <span className="contact-item-value">{EMAIL}</span>
+              </div>
+            </a>
+
+            <button
+              type="button"
+              className={`contact-copy${copyState ? ` is-${copyState}` : ''}`}
+              onClick={copyEmail}
+              aria-label={`Copy email address ${EMAIL} to clipboard`}
+            >
+              {copyState === 'copied'
+                ? <Check size={14} strokeWidth={2} />
+                : <Copy size={14} strokeWidth={1.75} />}
+              <span className="contact-copy-text">
+                {copyState === 'copied' ? 'Copied' : copyState === 'failed' ? 'Select it' : 'Copy'}
+              </span>
+            </button>
+          </div>
 
           <a href="https://github.com/jen000" target="_blank" rel="noopener noreferrer" className="contact-item">
             <div className="contact-icon">
@@ -51,6 +114,15 @@ export default function Contact() {
             <span className="contact-arrow">→</span>
           </a>
         </div>
+
+        {/* Announced to screen readers; sighted users get the button label */}
+        <p className="contact-copy-status" role="status" aria-live="polite">
+          {copyState === 'copied'
+            ? `${EMAIL} copied to your clipboard.`
+            : copyState === 'failed'
+              ? "Your browser blocked the copy — the address above is selectable."
+              : ''}
+        </p>
       </div>
     </div>
   )
