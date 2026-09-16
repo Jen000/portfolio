@@ -1108,8 +1108,17 @@ h1, h2, h3, h4 {
   box-shadow: 0 2px 0 var(--border), 0 4px 20px rgba(0,0,0,0.04);
 }
 
+/* <picture> is inline by default — make it behave as the flex item */
+.about-salem-card picture {
+  display: block;
+}
+
 .about-salem-photo {
   width: 100%;
+  /* height:auto is required — the img's width/height attributes (kept for
+     layout stability) are presentation hints that would otherwise give the
+     element two definite sides and make it ignore aspect-ratio. */
+  height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
@@ -1822,6 +1831,76 @@ h1, h2, h3, h4 {
 
 .contact-item:hover {
   background: var(--teal-50);
+}
+
+/* ── Email row: mailto link + copy button side by side ── */
+.contact-row {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid var(--border);
+}
+
+/* The row owns the divider now, and the link owns the remaining width */
+.contact-row .contact-item {
+  flex: 1;
+  min-width: 0;
+  border-bottom: none;
+}
+
+.contact-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  align-self: center;
+  margin-right: 20px;
+  padding: 8px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--teal-800);
+  background: var(--teal-50);
+  border: 1px solid var(--teal-100);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s var(--ease), border-color 0.15s var(--ease),
+    color 0.15s var(--ease), transform 0.15s var(--ease);
+}
+
+.contact-copy:hover {
+  background: var(--teal-100);
+  border-color: var(--teal-400);
+  transform: translateY(-1px);
+}
+
+.contact-copy:active {
+  transform: translateY(0);
+}
+
+.contact-copy.is-copied {
+  color: #fff;
+  background: var(--teal-400);
+  border-color: var(--teal-400);
+}
+
+.contact-copy.is-failed {
+  color: #8a4b2b;
+  background: #F7EADF;
+  border-color: #E4C4A8;
+}
+
+.contact-copy-text {
+  white-space: nowrap;
+}
+
+.contact-copy-status {
+  min-height: 18px;
+  margin: 12px 0 0;
+  font-size: 12.5px;
+  font-weight: 400;
+  color: var(--teal-600);
+  text-align: center;
 }
 
 .contact-icon {
@@ -2539,4 +2618,6 @@ body::after {
   .contact-page { padding: 48px 20px 80px; }
   .contact-title { font-size: 34px; }
   .contact-item { padding: 16px 18px; gap: 12px; }
+  .contact-copy { margin-right: 14px; padding: 7px 11px; }
+  .contact-copy-text { font-size: 11.5px; }
 }

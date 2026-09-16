@@ -27,15 +27,26 @@ export default function About() {
           </div>
 
           <div className="about-salem-card">
-            {
+            {/* Two widths so desktop (a 260px column) doesn't download the
+                mobile-sized asset, and WebP ahead of the JPEG fallback. */}
+            <picture>
+              <source
+                type="image/webp"
+                srcSet="/images/salem-520.webp 520w, /images/salem-720.webp 720w"
+                sizes="(max-width: 768px) 100vw, 260px"
+              />
               <img
-                src="/images/salem.jpg"
+                src="/images/salem-520.jpg"
+                srcSet="/images/salem-520.jpg 520w, /images/salem-720.jpg 720w"
+                sizes="(max-width: 768px) 100vw, 260px"
+                width="520"
+                height="520"
                 alt="Salem the cat"
                 className="about-salem-photo"
                 loading="lazy"
                 decoding="async"
               />
-            }
+            </picture>
             <div className="about-salem-info">
               <p className="about-salem-name">Salem</p>
               <p className="about-salem-desc">
