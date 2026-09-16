@@ -112,7 +112,7 @@ export default function Projects() {
 
         {/* ── Currently building ── */}
         <div className="projects-wip-section">
-          <div className="projects-wip-header">
+          <div className="projects-wip-header" data-reveal>
             <Hammer size={18} strokeWidth={1.5} className="projects-wip-icon" />
             <div>
               <span className="projects-eyebrow">In progress</span>
@@ -132,7 +132,7 @@ export default function Projects() {
 
         {/* ── Work projects ── */}
         <div className="projects-work-section">
-          <div className="projects-work-header">
+          <div className="projects-work-header" data-reveal>
             <div className="projects-work-header-text">
               <span className="projects-eyebrow">Professional work</span>
               <h2 className="projects-work-title">Built at Eleos</h2>

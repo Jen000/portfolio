@@ -1,0 +1,188 @@
+<!doctype html>
+<!--
+  Source for public/og-image.png — the social preview card that LinkedIn,
+  Slack, iMessage and friends show when jenna-adams.info is shared.
+
+  To regenerate after editing (needs a Chrome/Chromium on PATH):
+
+    chrome --headless --hide-scrollbars --force-device-scale-factor=1 \
+           --window-size=1200,630 \
+           --screenshot=public/og-image.png tools/og-card.html
+
+  Keep it exactly 1200x630 — that's the size the og:image:width /
+  og:image:height tags in index.html promise.
+-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=DM+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --teal-50: #e1f5ee;
+        --teal-100: #9fe1cb;
+        --teal-400: #1d9e75;
+        --teal-600: #0f6e56;
+        --teal-800: #085041;
+        --cream: #f5f2ee;
+        --cream-card: #fffdf9;
+        --ink: #1a1714;
+        --ink-mid: #3d3a37;
+        --ink-muted: #6b6560;
+        --border: #ddd9d3;
+      }
+
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { width: 1200px; height: 630px; }
+
+      body {
+        font-family: 'DM Sans', sans-serif;
+        background: var(--cream);
+        color: var(--ink);
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Soft teal washes, so the card has some depth instead of flat cream */
+      .wash-a, .wash-b { position: absolute; border-radius: 50%; }
+
+      .wash-a {
+        width: 760px; height: 760px; right: -190px; top: -250px;
+        background: radial-gradient(circle, rgba(29, 158, 117, 0.16) 0%, rgba(29, 158, 117, 0) 68%);
+      }
+
+      .wash-b {
+        width: 620px; height: 620px; left: -210px; bottom: -280px;
+        background: radial-gradient(circle, rgba(15, 110, 86, 0.12) 0%, rgba(15, 110, 86, 0) 70%);
+      }
+
+      .topbar {
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 10px;
+        background: linear-gradient(90deg, var(--teal-600), var(--teal-400) 55%, var(--teal-100));
+      }
+
+      .frame {
+        position: absolute;
+        inset: 10px 0 0 0;
+        display: flex;
+        align-items: center;
+        padding: 0 82px;
+        gap: 58px;
+      }
+
+      .left { flex: 1; min-width: 0; }
+
+      .eyebrow {
+        display: inline-block;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 0.19em;
+        text-transform: uppercase;
+        color: var(--teal-600);
+        background: var(--teal-50);
+        border: 1px solid var(--teal-100);
+        padding: 8px 20px;
+        border-radius: 100px;
+        margin-bottom: 28px;
+      }
+
+      h1 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        font-size: 96px;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        margin-bottom: 20px;
+      }
+
+      h1 em { font-style: italic; color: var(--teal-600); }
+
+      .tagline {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-weight: 600;
+        font-size: 31px;
+        color: var(--ink-mid);
+        margin-bottom: 30px;
+      }
+
+      .pills { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 32px; }
+
+      .pill {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--teal-800);
+        background: var(--teal-50);
+        border: 1px solid var(--teal-100);
+        padding: 8px 18px;
+        border-radius: 100px;
+      }
+
+      .url {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        font-size: 22px;
+        font-weight: 500;
+        color: var(--ink-muted);
+        letter-spacing: 0.02em;
+      }
+
+      .dot {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: var(--teal-400);
+        box-shadow: 0 0 0 6px rgba(29, 158, 117, 0.18);
+      }
+
+      .right { flex-shrink: 0; }
+
+      /* overflow:hidden + oversized img crops the shadow baked into ja.png */
+      .mono {
+        width: 296px;
+        height: 296px;
+        border-radius: 50%;
+        background: var(--cream-card);
+        border: 1px solid var(--border);
+        overflow: hidden;
+        box-shadow: 0 3px 0 var(--border), 0 24px 60px rgba(8, 80, 65, 0.17);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mono img { width: 330px; height: 330px; display: block; flex-shrink: 0; }
+    </style>
+  </head>
+  <body>
+    <div class="wash-a"></div>
+    <div class="wash-b"></div>
+    <div class="topbar"></div>
+
+    <div class="frame">
+      <div class="left">
+        <span class="eyebrow">Solutions Engineer &middot; Greenville, SC</span>
+        <h1>Jenna <em>Adams</em></h1>
+        <p class="tagline">I speak fluent tech and fluent human.</p>
+        <div class="pills">
+          <span class="pill">SQL</span>
+          <span class="pill">Python</span>
+          <span class="pill">dbt</span>
+          <span class="pill">AWS</span>
+          <span class="pill">React</span>
+          <span class="pill">REST APIs</span>
+        </div>
+        <div class="url"><span class="dot"></span>jenna-adams.info</div>
+      </div>
+
+      <div class="right">
+        <div class="mono"><img src="../public/ja.png" alt="JA monogram" /></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -12,7 +12,7 @@ export default function About() {
         <h1 className="about-title">More than a résumé.</h1>
 
         {/* ── Bio + Salem ── */}
-        <div className="about-intro-row">
+        <div className="about-intro-row" data-reveal>
           <div className="about-bio-col">
             <div className="about-bio-card">
               <span className="about-section-label">The work</span>
@@ -28,7 +28,13 @@ export default function About() {
 
           <div className="about-salem-card">
             {
-              <img src="/images/salem.jpg" alt="Salem the cat" className="about-salem-photo" />
+              <img
+                src="/images/salem.jpg"
+                alt="Salem the cat"
+                className="about-salem-photo"
+                loading="lazy"
+                decoding="async"
+              />
             }
             <div className="about-salem-info">
               <p className="about-salem-name">Salem</p>
@@ -40,7 +46,7 @@ export default function About() {
         </div>
 
         {/* ── The person (full width) ── */}
-        <div className="about-bio-card about-bio-card--full">
+        <div className="about-bio-card about-bio-card--full" data-reveal>
           <span className="about-section-label">The person</span>
           <div className="about-bio-card-body">
             <p>
@@ -53,7 +59,7 @@ export default function About() {
         </div>
 
         {/* ── Currently ── */}
-        <div className="about-currently-card">
+        <div className="about-currently-card" data-reveal>
           <span className="about-section-label">Currently into</span>
           <div className="about-currently-grid">
             <div className="about-currently-item">
@@ -79,7 +85,7 @@ export default function About() {
 
         {/* ── Hobbies ── */}
         <div className="about-hobbies-grid">
-          <div className="about-hobby-card">
+          <div className="about-hobby-card" data-reveal data-reveal-delay="0">
             <div className="about-hobby-header">
               <Gamepad2 size={20} strokeWidth={1.5} className="about-hobby-icon" />
               <span className="about-hobby-title">Games</span>
@@ -96,7 +102,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="about-hobby-card">
+          <div className="about-hobby-card" data-reveal data-reveal-delay="1">
             <div className="about-hobby-header">
               <Telescope size={20} strokeWidth={1.5} className="about-hobby-icon" />
               <span className="about-hobby-title">Science & History</span>
@@ -112,7 +118,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="about-hobby-card">
+          <div className="about-hobby-card" data-reveal data-reveal-delay="2">
             <div className="about-hobby-header">
               <Music size={20} strokeWidth={1.5} className="about-hobby-icon" />
               <span className="about-hobby-title">Music</span>
@@ -127,7 +133,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="about-hobby-card">
+          <div className="about-hobby-card" data-reveal data-reveal-delay="3">
             <div className="about-hobby-header">
               <TreePine size={20} strokeWidth={1.5} className="about-hobby-icon" />
               <span className="about-hobby-title">The Outdoors</span>

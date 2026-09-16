@@ -3,7 +3,7 @@ import { Shuffle, Code2, Users } from 'lucide-react'
 
 const data = {
   remix: {
-    summary: "Client-focused Solutions Engineer with 4+ years of experience guiding technical implementations, managing strategic accounts, and translating complex requirements into scalable solutions. Proven track record of driving successful client onboarding, building trusted cross-functional partnerships, and delivering measurable outcomes. Actively leverages AI tools to work smarter and move faster.",
+    summary: "I lead with curiosity and dig to the root of the issue, not the symptom. Six years growing from QA to SE has sharpened that instinct, and taught me that what a client describes on a call is rarely the real problem. I like the full stack of the job: the technical work, the client relationships, and everything in between.",
     jobs: [
       {
         title: "Solutions Engineer",
@@ -11,11 +11,11 @@ const data = {
         location: "Greenville, SC",
         dates: "Feb 2025 – Present",
         bullets: [
-          "Serve as the technical point of contact for all 15 direct clients and 3 reseller partners, supporting integrations, troubleshooting, and platform adoption across the full customer base.",
-          "Lead discovery and solutioning sessions with clients to map business requirements to platform capabilities, designing integrations and workflows tailored to each customer's operational needs.",
-          "Built a zero-ETL AWS Athena connector in Java that queries HubSpot API data on an ad hoc basis, integrating results directly into the existing data lake — eliminating a third-party ETL dependency and unlocking previously inaccessible data.",
-          "Develop and maintain technical documentation, integration guides, and API references that accelerate client onboarding and reduce time-to-value.",
-          "Incorporate AI prompt engineering (Claude, Gemini) into daily workflows to improve solutioning speed and technical output quality.",
+          "Technical point of contact for all 15 enterprise fleet clients and 3 reseller partners, collaborating closely with AEs, Product, Support, and Engineering to resolve issues and drive platform success.",
+          "Lead discovery sessions that push past surface requirements to find the real operational problem, helping teams understand how the product works, think through operational challenges, and build toward the right solution.",
+          "Own the full post-sale relationship for 3 strategic accounts, ensuring solutions work in practice, not just on paper.",
+          "Built a zero-ETL AWS Athena connector in Java that queries HubSpot data on demand, integrating directly into the data lake and eliminating a third-party ETL dependency.",
+          "Run knowledge-sharing sessions with AEs to close the gap between what clients are experiencing and what the team understands.",
         ],
       },
       {
@@ -24,9 +24,9 @@ const data = {
         location: "Greenville, SC",
         dates: "May 2023 – Feb 2025",
         bullets: [
-          "Managed end-to-end onboarding for 2 new enterprise clients, leading technical scoping, integration development, and go-live — achieving 100% rollout within 3 months of contract signing.",
-          "Acted as the technical bridge between clients and internal Engineering, translating customer feedback into product improvements and ensuring alignment on integration requirements.",
-          "Partnered with the business intelligence team to migrate reporting infrastructure to dbt, delivering 50+ new reports that improved visibility into client health and operational performance.",
+          "Onboarded 2 new enterprise clients end-to-end — 100% rollout within 3 months by staying close to blockers as they emerged, not after.",
+          "Translation layer between clients and Engineering: turned vague frustrations into clear requirements, and made sure fixes addressed what clients actually needed.",
+          "Migrated reporting infrastructure to dbt with the BI team, delivering 50+ new reports improving visibility into client health.",
           "Authored user guides and technical documentation for platform features and public APIs used by clients and reseller partners.",
         ],
       },
@@ -36,8 +36,8 @@ const data = {
         location: "Clemson, SC",
         dates: "Jan 2022 – May 2023",
         bullets: [
-          "Supported 5 product resellers through complex app and web integration challenges, serving as a technical resource during pre- and post-sales engagements.",
-          "Collaborated with support and product teams to resolve escalated client issues, reducing time-to-resolution and improving customer satisfaction scores.",
+          "Supported 5 resellers through complex integration challenges — dug into the technical details to understand why something wasn’t working before suggesting a fix.",
+          "Collaborated with Support and Product to resolve escalated issues, improving time-to-resolution by ensuring the right people had the right context.",
         ],
       },
       {
@@ -46,16 +46,15 @@ const data = {
         location: "Clemson, SC",
         dates: "Jun 2020 – Jan 2022",
         bullets: [
-          "Conducted QA testing across 6 product segments, documenting defects and working cross-functionally with Engineering to drive resolution and reduce post-release issues.",
-          "Designed and implemented the QA Analyst onboarding program from scratch, standardizing training across the team and reducing early turnover by 35%.",
-          "Managed approximately 120 client inquiries monthly, developing deep product knowledge and reducing resolution time by 20% through improved troubleshooting processes.",
+          "Managed ~120 client inquiries monthly; reduced resolution time 20% by spotting patterns in recurring issues.",
+          "Built the QA onboarding program from scratch — reduced early turnover 35% by standardizing training and setting clearer expectations from day one.",
         ],
       },
     ],
     skills: [
       { category: "Client Success", items: "Account Management, Technical Onboarding, Solutioning, Cross-functional Collaboration" },
-      { category: "Technical", items: "REST APIs, API Integration, SQL, dbt, AWS Athena, Python, Java, React, Git" },
-      { category: "Communication", items: "Technical writing, client-facing presentations, cross-functional collaboration, translating complex concepts for non-technical audiences" },
+      { category: "Technical", items: "REST APIs, SQL, dbt, AWS Athena, Python, Java, React, Git" },
+      { category: "Communication", items: "Technical Documentation, Stakeholder Presentations, Translating complexity for non-technical audiences" },
       { category: "AI & Productivity", items: "Prompt engineering, AI-assisted development (Claude, Gemini)" },
     ],
   },
