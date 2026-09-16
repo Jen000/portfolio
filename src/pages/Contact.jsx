@@ -8,7 +8,7 @@ export default function Contact() {
           Whether it's a job opportunity, a project idea, or just to say hi — my inbox is open.
         </p>
 
-        <div className="contact-card">
+        <div className="contact-card" data-reveal>
           <a href="mailto:jennashaye417@gmail.com" className="contact-item">
             <div className="contact-icon">
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--teal-600)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

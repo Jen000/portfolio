@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
@@ -6,9 +6,17 @@ import Resume from './pages/Resume'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Timeline from './pages/Timeline'
+import useScrollReveal from './hooks/useScrollReveal'
 
 export default function App() {
   const [page, setPage] = useState('home')
+
+  // Navigating is a state swap, not a page load — put the reader back at the top
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' })
+  }, [page])
+
+  useScrollReveal(page)
 
   const renderPage = () => {
     switch (page) {

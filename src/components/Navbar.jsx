@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
 const links = [
@@ -11,6 +11,15 @@ const links = [
 
 export default function Navbar({ setPage, activePage }) {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  // Lift the bar off the page once there's content behind it
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   const navigate = (key) => {
     setPage(key)
@@ -18,8 +27,11 @@ export default function Navbar({ setPage, activePage }) {
   }
 
   return (
-    <nav className="nav">
+    <nav className={`nav${scrolled ? ' scrolled' : ''}`}>
       <button className="nav-logo" onClick={() => navigate('home')}>
+        <span className="nav-logo-mark">
+          <img src="/ja.png" alt="" />
+        </span>
         Jenna
       </button>
 
